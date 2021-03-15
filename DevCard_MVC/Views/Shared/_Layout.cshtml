@@ -1,48 +1,89 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DevCard_MVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>DevCard تحت لیسانس  سعیدی</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <link  rel="stylesheet" href="assets/css/theme-1.css">
+    <link  rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DevCard_MVC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+
+    <header class="header text-center">
+        <div class="force-overflow">
+            <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">محمد فاضل تاجیک سعیدی</a></h1>
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <div id="navigation" class="collapse navbar-collapse flex-column">
+                    <div class="profile-section pt-3 pt-lg-0">
+                        <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/me.jpeg" alt="image">
+
+                        <div class="bio mb-3">
+                            سلام، محمد فاضل  سعیدی هستم  به وبسایت شخصی من خوش
+                            آمدید.
+                        </div>
+                        <ul class="social-list list-inline py-2 mx-auto">
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <ul class="navbar-nav flex-column text-right">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-user fa-fw ml-2"></i>صفحه اصلی<span class="sr-only">(current)</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" href="contact.html">
+                                <i class="fas fa-envelope-open-text fa-fw ml-2"></i>ارتباط با ما
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="main-wrapper">
+
+        @RenderBody()
+
+        <footer class="footer text-center py-4">
+            <small class="copyright">
+                تولید شده توسط &copy; <a href="http://www.atriya.com" target="_blank">
+                    محمد سعیدی
+                </a>
+            </small>
+        </footer>
+
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 1399 - DevCard_MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
