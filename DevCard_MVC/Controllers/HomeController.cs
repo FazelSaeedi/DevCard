@@ -23,7 +23,8 @@ namespace DevCard_MVC.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            return View();
+            var model = new ContactForm();
+            return View(model);
         }
 
         [HttpPost]
