@@ -28,9 +28,16 @@ namespace DevCard_MVC.Controllers
         }
 
         [HttpPost]
-        public JsonResult Contact(ContactForm form)
+        public IActionResult Contact(ContactForm model)
         {
-            return Json(Ok());
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "اطلاعات وارد شده صحیح نیست لطفا دوباره تلاش کنید";
+                return View(model);
+            }
+
+            ViewBag.succuss = "پیغام شما با موفقیت ارسال شد";
+            return View(model);
         }
 
         /*[HttpPost]

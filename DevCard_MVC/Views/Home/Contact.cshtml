@@ -56,13 +56,29 @@
 
 <section class="contact-section px-3 py-5 p-md-5">
     <div class="container">
+        @if (string.IsNullOrWhiteSpace(ViewBag.succuss))
+        {
+            <div class="alert-success">
+                <p>@ViewBag.succuss</p>
+            </div>
+        }
+
+        @if (string.IsNullOrWhiteSpace(ViewBag.error))
+        {
+            <div class="alert-danger">
+                <p>@ViewBag.error</p>
+            </div>
+        }
+
+
+
         <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" asp-action="Contact">
             <h3 class="text-center mb-3">در دسترس باشید!</h3>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label class="sr-only" for="cname">نام</label>
-                    <input type="text" class="form-control" id="cname" name="name" placeholder="نام" asp-for="name">
-                    <span asp-validation-for="name"></span>
+                    <input type="text" class="form-control" id="cname" name="name" placeholder="نام" @*asp-for="name"*@>
+                    @* <span asp-validation-for="name"></span>*@
                 </div>
                 <div class="form-group col-md-6">
                     <label class="sr-only" for="cemail">ایمیل</label>
