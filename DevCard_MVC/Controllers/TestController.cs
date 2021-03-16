@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevCard_MVC.Controllers
@@ -64,13 +65,17 @@ namespace DevCard_MVC.Controllers
 
         public IActionResult Index()
         {
-            // return new OkResult();
-            return new StatusCodeResult(200);
+            return new OkResult();
+        }
+
+        public JsonResult Contact(ContactForm form)
+        {
+            return Json(Ok());
         }
 
     }
 
-    public class JavascriptResult : ContentResult
+        public class JavascriptResult : ContentResult
     {
         public JavascriptResult(string data)
         {
