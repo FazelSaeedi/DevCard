@@ -10,7 +10,7 @@ namespace DevCard_MVC.Models
         public string name { get; set; }
         public string Email { get; set; }
         public string message { get; set; }
-        public string service { get; set; }
+        public string services { get; set; }
 
     }
 }
