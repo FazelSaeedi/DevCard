@@ -12,6 +12,18 @@ namespace DevCard_MVC.Models
 
         public string description  { get; set; }
 
+        public string image { get; set; }
+
         public string client  { get; set; }
+
+        public Project(long id, string name, string description, string image , string client)
+        {
+            this.id = id;
+            this.Name = name;
+            this.description = description;
+            this.image = image;
+            this.client = client;
+        }
+
     }
 }
